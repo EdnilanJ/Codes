@@ -4,44 +4,77 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div className='first'>
+        
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+            <h1 className='ngalan'>
+                I'am Jonathan P. Ednilan 
+            </h1>
+             <p className='sen'>
+            I'm a Web Developer, determine enough <br/> to meet your expectations the best that I can.
+            </p>
+    </div>  
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+.first{
+    height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  object-fit: contain;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.ima{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
 }
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+ .ngalan {
+  transition: transform 0.3s ease-in-out;
+    color: red;
+    font-size: 50px;
+    margin-left: 15px;
+    margin-top: -100px;
+  }
+  
+.sen {
+    margin-left: 15px;
+    margin-top: -10px;
+    color: red;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  @media screen and (max-width: 960px) {
+    .ngalan {
+      font-size: 70px;
+      margin-top: -150px;
+    }
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  @media screen and (max-width: 768px) {
+    .ngalan {
+      font-size: 50px;
+      margin-top: -100px;
+    }
+  
+    .sen {
+      font-size: 30px;
+    }
+  
+    .btn-mobile {
+      display: block;
+      text-decoration: none;
+    }
+  
+    .btn {
+      width: 100%;
+    }
   }
-}
+  
 </style>
